@@ -60,22 +60,8 @@ height: 4rem;
 }
 .chatbox-message-status {
     font-size: .875rem;
-    color: var(--grey-d-3);
 }
-.chatbox-message-dropdown{
-    position: relative;
 
-}
-.chatbox-message-dropdown-toggle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: 1.25rem;
-    cursor: pointer;
-    border-radius: 50%;
-}
 /* .chatbox-message-dropdown-toggle:hover{
     background-color: var(--grey);
 
@@ -113,6 +99,8 @@ height: 4rem;
 .chatbox-message-content{
 padding: 1.5rem;
 grid-row-gap: 1rem;
+max-height: 300px;
+overflow-y: auto;
 }
 .chatbox-message-item {
     width: 90%;
