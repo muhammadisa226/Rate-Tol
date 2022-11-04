@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body class="bg-slate-50">
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
             <a href="{{ url_for('index') }}" class="flex items-center">
@@ -65,12 +65,13 @@
     </div>
 
 
+    <!-- SECTION CHATBOX -->
 <div class="chatbox-wrapper">
-        <div class="chatbox-toggle">
+        <div class="chatbox-toggle bg-blue-500 text-white">
             <i class='bx bx-message-dots'></i>
         </div>
         <div class="chatbox-message-wrapper">
-            <div class="chatbox-message-header">
+            <div class="chatbox-message-header bg-white">
                 <div class="chatbox-message-profile">
                     <img src="{{url_for('static',filename='img/chatbot-profile.png')}}" alt="chatbot-profile" class="chatbox-message-img">
                     <div>
@@ -79,36 +80,38 @@
                     </div>
                 </div>
                 <div class="chatbox-message-dropdown">
-                    <i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
-                    <ul class="chatbox-message-dropdown-menu">
+                    <i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle hover:bg-gray-500'></i>
+                    <ul class="chatbox-message-dropdown-menu bg-white hover:bg-gray-400">
                         <li>
-                            <a href="#">Exit</a>
+                            <a class="text-black" href="#">Exit</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="chatbox-message-content">
-                <div class="chatbox-message-item sent">
+            <div class="chatbox-message-content bg-gray-300 flex flex-col">
+                <div class="chatbox-message-item sent bg-blue-400 text-white ">
                     <span class="chatbox-message-item-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem?
                     </span>
                     <span class="chatbox-message-item-time">08:30</span>
                 </div>
-                <div class="chatbox-message-item received">
+                <div class="chatbox-message-item received bg-white">
                     <span class="chatbox-message-item-text">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem?
                     </span>
                     <span class="chatbox-message-item-time">08:31</span>
                 </div>
             </div>
-            <div class="chatbox-message-bottom">
-                <form action="#" class="chatbox-message-form">
-                    <textarea rows="1" placeholder="Ketik Sesuatu..." class="chatbox-message-input"></textarea>
-                    <button type="submit" class="chatbox-message-submit"><i class='bx bx-send' ></i></button>
+            <div class="chatbox-message-bottom bg-white">
+                <form action="#" class="chatbox-message-form bg-gray-300">
+                    <textarea name="" id="" cols="40" rows="1"  class="chatbox-message-input" placeholder="Ketik Sesuatu...."></textarea>
+                    <button type="submit" class="chatbox-message-submit text-blue-500"><i class='bx bx-send' ></i></button>
                 </form>
             </div>
         </div>
 </div>
+
+<!-- END SECTION CHATBOX -->
     <script src="{{url_for('static',filename='dist/js/script.js')}}"></script>
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 </body>
