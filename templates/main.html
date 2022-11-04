@@ -9,6 +9,7 @@
     <title>Rate Tol</title>
     {% endblock %}
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/chatbot.css')}}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
@@ -66,8 +67,46 @@
 
 <div class="chatbox-wrapper">
         <div class="chatbox-toggle">
-
-
+            <i class='bx bx-message-dots'></i>
+        </div>
+        <div class="chatbox-message-wrapper">
+            <div class="chatbox-message-header">
+                <div class="chatbox-message-profile">
+                    <img src="{{url_for('static',filename='img/chatbot-profile.png')}}" alt="chatbot-profile" class="chatbox-message-img">
+                    <div>
+                        <h4 class="chatbox-message-name">AI CHATBOT</h4>
+                        <p class="chatbox-message-status">Online</p>
+                    </div>
+                </div>
+                <div class="chatbox-message-dropdown">
+                    <i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
+                    <ul class="chatbox-message-dropdown-menu">
+                        <li>
+                            <a href="#">Exit</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chatbox-message-content">
+                <div class="chatbox-message-item sent">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem?
+                    </span>
+                    <span class="chatbox-message-item-time">08:30</span>
+                </div>
+                <div class="chatbox-message-item received">
+                    <span class="chatbox-message-item-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptatem?
+                    </span>
+                    <span class="chatbox-message-item-time">08:31</span>
+                </div>
+            </div>
+            <div class="chatbox-message-bottom">
+                <form action="#" class="chatbox-message-form">
+                    <textarea rows="1" placeholder="Ketik Sesuatu..." class="chatbox-message-input"></textarea>
+                    <button type="submit" class="chatbox-message-submit"><i class='bx bx-send' ></i></button>
+                </form>
+            </div>
         </div>
 </div>
     <script src="{{url_for('static',filename='dist/js/script.js')}}"></script>
